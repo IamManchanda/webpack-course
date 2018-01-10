@@ -24,6 +24,7 @@ server.use(webpackDevMiddleware);
 server.use(webpackHotMiddleware);
 server.use(staticMiddleware);
 
+debugger;
 server.listen(3000, () => {
   console.log('Server is listening');
 });

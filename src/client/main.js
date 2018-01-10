@@ -10,6 +10,8 @@ require('webpack-hot-middleware/client?reload=true');
 require('./main.css');
 require('./index.html');
 
+debugger;
+
 const greet = async (args) => {
   const { a, b } = args;
   await console.log('Hello ES2008 from ES2018 & ESNext', a, b);

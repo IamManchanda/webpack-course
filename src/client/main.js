@@ -5,7 +5,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 require('babel-runtime/regenerator');
 /* eslint-enable */
-
+require('webpack-hot-middleware/client');
 require('./main.css');
 require('./index.html');
 

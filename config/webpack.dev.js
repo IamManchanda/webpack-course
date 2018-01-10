@@ -3,21 +3,26 @@
  */
 
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
     main: [
-      './src/main.js',
+      './src/client/main.js',
     ],
   },
   output: {
-    filename: '[name]-bundle.js',
-    path: path.resolve(__dirname, '../dist/js'),
+    filename: 'js/[name]-bundle.js',
+    path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
   },
   devServer: {
     contentBase: 'dist',
     overlay: true,
+    hot: true,
+    stats: {
+      colors: true,
+    },
   },
   module: {
     rules: [
@@ -67,11 +72,15 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'images/[name]-[hash:8].[ext]',
+              name: 'assets/img/[name]-[hash:8].[ext]',
             },
           },
         ],
       },
     ],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
 };

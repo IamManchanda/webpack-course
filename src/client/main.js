@@ -3,9 +3,10 @@
  */
 
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-unresolved */
 require('babel-runtime/regenerator');
+require('webpack-hot-middleware/client?reload=true');
 /* eslint-enable */
-require('webpack-hot-middleware/client');
 require('./main.css');
 require('./index.html');
 

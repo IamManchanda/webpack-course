@@ -8,8 +8,12 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: ['./src/client/main.js'],
-    ts: ['./src/client/index.ts'],
+    main: ['./src/client/main'],
+    angular: ['./src/client/angular'],
+    polyfills: ['./src/client/angular-polyfills'],
+  },
+  resolve: {
+    extensions: ['.js', '.ts'],
   },
   output: {
     filename: 'js/[name]-bundle.js',
@@ -18,6 +22,7 @@ module.exports = {
   },
   devServer: {
     contentBase: 'dist',
+    historyApiFallback: true, // Angular Routing
     overlay: true,
     hot: true,
     stats: {
@@ -83,6 +88,11 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core/,
+      path.join(__dirname, './src'),
+      {},
+    ),
     new HTMLWebpackPlugin({
       template: './src/client/index.html',
     }),

@@ -11,22 +11,38 @@
     "build": "webpack --config=config/webpack.dev.js"
   },
   "dependencies": {
+    "@angular/common": "^5.1.3",
+    "@angular/compiler": "^5.1.3",
+    "@angular/core": "^5.1.3",
+    "@angular/forms": "^5.1.3",
+    "@angular/http": "^5.1.3",
+    "@angular/platform-browser": "^5.1.3",
+    "@angular/platform-browser-dynamic": "^5.1.3",
+    "@angular/router": "^5.1.3",
     "awesome-typescript-loader": "^3.4.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
+    "core-js": "^2.5.3",
     "css-loader": "^0.28.8",
     "express": "^4.16.2",
     "extract-loader": "^1.0.1",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.4",
     "html-webpack-plugin": "^2.30.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.5.6",
     "style-loader": "^0.19.1",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
-    "webpack-hot-middleware": "^2.21.0"
+    "webpack-hot-middleware": "^2.21.0",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.44",
+    "@types/node": "^9.3.0"
   }
 }

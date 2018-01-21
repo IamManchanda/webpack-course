@@ -9,7 +9,7 @@ require('react-hot-loader/patch');
 require('babel-core/register');
 require('webpack-hot-middleware/client?reload=true');
 /* eslint-enable */
-require('./main.css');
+require('./main.scss');
 require('./index.html');
 require('./app');
 

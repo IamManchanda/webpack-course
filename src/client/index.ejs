@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello Webpack</title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
   <div class="profile">
-    <img src="./assets/img/link.jpg" alt="">
+    <img src="<%= require('./assets/img/link.jpg') %>" alt="">
     <h1>Hello Webpack 3</h1>
   </div>
 </body>

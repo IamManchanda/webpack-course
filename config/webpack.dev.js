@@ -76,7 +76,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HTMLWebpackPlugin({
-      template: './src/client/index.html',
+      template: './src/client/index.ejs',
+      title: 'Hello Webpack 3',
     }),
   ],
 };

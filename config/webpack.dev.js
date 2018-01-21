@@ -70,13 +70,22 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HTMLWebpackPlugin({
-      template: './src/client/index.html',
+      template: './src/client/index.pug',
+      title: 'Hello Webpack 3',
     }),
   ],
 };

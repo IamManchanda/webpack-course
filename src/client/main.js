@@ -8,7 +8,6 @@ require('babel-runtime/regenerator');
 require('webpack-hot-middleware/client?reload=true');
 /* eslint-enable */
 require('./main.css');
-require('./index.html');
 
 const greet = async (args) => {
   const { a, b } = args;

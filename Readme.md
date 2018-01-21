@@ -12,14 +12,20 @@ npm install # or, yarn
 
 ## Usage
 
-Development
+Development Server
 
 ```
 npm run dev # or, yarn dev
 ```
 
+Build for Development
+
+```
+npm run build:dev # or, yarn build:dev
+```
+
 Build for Production
 
 ```
-npm run build # or, yarn build
+npm run build:prod # or, yarn build:prod
 ```

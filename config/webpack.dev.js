@@ -70,13 +70,24 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.hbs$/,
+        use: [
+          {
+            loader: 'handlebars-loader',
+            query: {
+              inlineRequires: '/img/',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HTMLWebpackPlugin({
-      template: './src/client/index.ejs',
+      template: './src/client/index.hbs',
       title: 'Hello Webpack 3',
     }),
   ],
